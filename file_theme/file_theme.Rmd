@@ -1,0 +1,97 @@
+---
+title: "RShiny - A Web App"
+subtitle: "A small introduction to RShiny."  
+author: 
+  - "Suhas P K"
+date: '`r Sys.Date()`'
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      ratio: 16:9
+      countIncrementalSlides: true
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  out.width = "100%",
+  cache = FALSE,
+  echo = TRUE,
+  message = FALSE, 
+  warning = FALSE,
+  hiline = TRUE,
+  toc = TRUE
+)
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_duo_accent(
+  primary_color = "#1381B0",
+  secondary_color = "#FF961C",
+  inverse_header_color = "#FFFFFF"
+)
+```
+
+## Shiny Web app
+
+- Shiny is a very powerful framework for building web applications based on R. 
+
+- Shiny apps are easy to write. Let users interact with your data and your analysis, all with R or Python.
+
+- Using `library(shiny)`, this will be an amateur attempt to create small functional web application.
+
+---
+
+## Overview
+
+- This is a final project from **Johns Hopkins Data Science Specialization: Developing Data Products**.
+
+- This assignment consists of two parts
+
+- Part 1 : A Shiny application.
+  1. A well documented user friendly Shiny application
+  2. Deploying the application on Rstudio's shiny server.
+  3. It must consist of an `input widget` (textbox, radio button, checkbox, ...) and operation on the UI input in server.R file.
+  4. A reactive display as the result of the server calculation.
+
+- Part 2 : A Reproducible Pitch Presentation.
+  1. It must consists of 5 slides to pitch the idea done in the Slidify or Rstudio Presenter.
+  2. The presentation should be pushed to github or Rpubs.
+  3. It must be hosted on github pages or Rpubs.
+
+---
+## Implementation and Visualization
+
+- Diamond data set is part of `library(ggplot2)` available in the R is used for this project.
+
+- Based on the input given in the Shiny web application from the data set, a reactive plot is generated.
+
+- The link to web app. CLICK ME!
+
+---
+## The Diamonds data set
+
+```{r data , echo=FALSE, message=FALSE}
+if (!require(ggplot2)){
+  install.packages("ggplot2")
+  library(ggplot2)
+}
+```
+
+```{r eval=requireNamespace("DT", quietly=TRUE), message=FALSE}
+DT::datatable(head(diamonds), fillContainer = FALSE, options = list(pageLength = 6))
+```
+---
+### `summary` of Diamonds data set
+```{r summary, message=FALSE, comment=""}
+summary(diamonds)
+```
+---
+class: inverse, center, middle
+# Thank you!
