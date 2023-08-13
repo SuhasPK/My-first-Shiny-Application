@@ -18,7 +18,7 @@ dataset <- diamonds
 pageWithSidebar(
   
   # Header panel with application name.
-  headerPanel("Diamond Data Analysis"),
+  headerPanel("Diamond Data Analysis - Suhas. P. K "),
   sidebarPanel(
     # Explaining the data attributes.
     

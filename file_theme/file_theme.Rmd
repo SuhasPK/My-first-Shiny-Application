@@ -24,7 +24,7 @@ knitr::opts_chunk$set(
   echo = TRUE,
   message = FALSE, 
   warning = FALSE,
-  hiline = TRUE,
+  hiline = TRUE
 )
 ```
 
@@ -71,7 +71,7 @@ style_duo_accent(
 
 - Based on the input given in the Shiny web application from the data set, a reactive plot is generated.
 
-- The link to web app. CLICK ME!
+- The link to web app. [CLICK ME!](https://suhaspk.shinyapps.io/Diamonds_ShinyApp)
 
 ---
 ## The Diamonds data set
@@ -91,6 +91,18 @@ DT::datatable(head(diamonds), fillContainer = FALSE, options = list(pageLength =
 ```{r summary, message=FALSE, comment=""}
 summary(diamonds)
 ```
+---
+## Data Analysis
+
+- The [diamonds shiny web app](https://suhaspk.shinyapps.io/Diamonds_ShinyApp) is an interactive web application that generates plots.
+- Based on the variables that is set to plot, an interactive plot is generated.
+- The plotting also supports `facets`.
+- After generating the plot, the user can give `title` to the plot and can download the plot in .png format. 
+---
+class: center, middle
+# CLICK HERE!
+## [My Github](https://github.com/SuhasPK/My-first-Shiny-Application)
+## [My Diamond Shiny Web Application](https://suhaspk.shinyapps.io/Diamonds_ShinyApp)
 ---
 class: inverse, center, middle
 # Thank you!
